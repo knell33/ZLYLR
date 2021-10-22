@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑资源</title>
+    <link rel="icon" href="../../imags/zlsoft.ico" type="image/x-icon">
+    <!-- jquery框架 -->
+    <script src="../../lib/jquery/dist/jquery.min.js"></script>
+    <!--bootstrap 4开始table及select依赖js-->
+    <!-- <script src="../../js/popper_2.0.0.js"></script> -->
+    <!--bootstrap框架-->
+    <script src="../../lib/Bootstrap_4.1.1/dist/js/bootstrap.js"></script>
+    <link href="../../lib/Bootstrap_4.1.1/dist/css/bootstrap.css" rel="stylesheet" />
+    <!--bootstrap table导出依赖文件，必须在booststrap table前面-->
+    <script src="../../lib/bootstrap-table-1.15.3/extensions/export/tableExport.jquery.plugin.min.js"></script>
+    <script src="../../lib/bootstrap-table-1.15.3/extensions/export/jspdf.min.js"></script>
+    <script src="../../lib/bootstrap-table-1.15.3/extensions/export/tableExport.jquery.plugin.min.js"></script>
+    <!--bootstrap表格插-->
+    <script src="../../lib/bootstrap-table-1.15.3/bootstrap-table.js"></script>
+    <script src="../../lib/bootstrap-table-1.15.3/bootstrap-table-zh-CN.min.js"></script>
+    <link href="../../lib/bootstrap-table-1.15.3/bootstrap-table.min.css" rel="stylesheet" />
+    <!--bootstrap下拉选择插件-->
+    <script src="../../lib/bootstrap-select-1.13.9/dist/js/bootstrap-select.js"></script>
+    <link href="../../lib/bootstrap-select-1.13.9/dist/css/bootstrap-select.css" rel="stylesheet" />
+    <script src="../../lib/bootstrap-select-1.13.9/dist/js/i18n/defaults-zh_CN.js"></script>
+    <!--<script src="../../js/bootstrap-table.min.js"></script>
+        <link href="../../js/bootstrap-table.min.css" rel="stylesheet" />-->
+    <!--bootstrap table分组-->
+    <script src="../../lib/bootstrap-table-1.15.3/extensions/group-by-v2/bootstrap-table-group-by.js"></script>
+    <link href="../../lib/bootstrap-table-1.15.3/extensions/group-by-v2/bootstrap-table-group-by.css" rel="stylesheet" />
+    <!--bootstrap table导出-->
+    <script src="../../lib/bootstrap-table-1.15.3/extensions/export/bootstrap-table-export.min.js"></script>
+
+    <!--字体图标-->
+    <link href="../../lib/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+
+    <!--layer弹出层插件-->
+    <script src="../../lib/layer/layer.js"></script>
+    <!--通用js-->
+    <script src="../../Common/zlCommon.js" asp-append-version="true"></script>
+    <script src="../../Common/zlWebApi.js" asp-append-version="true"></script>
+    <script src="../../Common/base.js" asp-append-version="true"></script>
+    <script src="../../Common/zlEnum.js" asp-append-version="true"></script>
+    <script src="../../Common/webapi.js" asp-append-version="true"></script>
+    <!--右键菜单-->
+    <script src="../../lib/rightkeymenu/jquery.contextmenu.r2.js"></script>
+    <link href="../../lib/rightkeymenu/page_style.css" rel="stylesheet" />
+
+    <!-- 通用导航 -->
+    <link href="../../lib/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../lib/assets/css/icons.css" />
+    <link rel="stylesheet" href="../../lib/assets/css/app.css" />
+    <script src="../../lib/assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="../../lib/assets/js/app.js"></script>
+    <!--echarts图表-->
+    <!-- <script src="../../lib/eCharts/dist/echarts.js"></script> -->
+    <!--ztree树形组件-->
+    <!-- <script src="../../lib/ztree/js/jquery.ztree.core.min.js"></script>
+    <link href="../../lib/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    <script src="../../lib/ztree/js/jquery.ztree.exhide.js"></script>
+    <script src="../../lib/ztree/js/fuzzysearch.js"></script>
+    <script src="../../lib/ztree/js/jquery.ztree.excheck.js"></script> -->
+
+    <!--bootstrap列拖动大小-->
+    <!--<link href="../../css/jquery.resizableColumns.css" rel="stylesheet" />
+        <script src="../../js/jquery.resizableColumns.min.js"></script>-->
+    <!--<script src="../../js/bootstrap-table-resizable.min.js"></script>-->
+    <!--拼音-->
+    <script src="../../lib/pinyin/pinyin_dict_firstletter.js"></script>
+    <script src="../../lib/pinyin/pinyinUtil.js"></script>
+    <!--主要css-->
+    <link href="../../css/main.css" rel="stylesheet" />
+    <!-- kendo -->
+    <link rel="stylesheet" href="../../lib/kendo/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="../../lib/kendo/styles/kendo.default.min.css">
+    <script src="../../lib/kendo/js/kendo.all.min.js" asp-append-version="true"></script>
+    <script src="../../lib/kendo/js/messages/kendo.messages.zh-CN.min.js"></script>
+    <script src="../../Common/ZLKendoCommon.js" asp-append-version="true"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row mt-1">
+            <label class="col-form-label ml-4" for="name"><strong class="isstate" style="color:red">*</strong>名称&emsp;&emsp;</label>
+            <div class="col align-self-center">
+                <input type="text" id="name" class="form-control form-control-sm inputItem" />
+            </div>
+        </div>
+        <div class="row mt-1">
+            <label class="col-form-label ml-4" for="url"><strong class="isstate" style="color:red">*</strong>末级地址</label>
+            <div class="col align-self-center">
+                <input type="text" id="url" class="form-control form-control-sm inputItem" placeholder="请勿输入特殊字符，如【 \ , ? , : , 空格 】"/>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <label class="col-form-label ml-4" for="memo">备注&emsp;&emsp;&ensp;</label>
+            <div class="col align-self-center">
+                <textarea id="memo" class="form-control inputItem" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
